@@ -1,5 +1,5 @@
 {
-  "name": "memo",
+  "name": "memo-be",
   "version": "1.0.0",
   "description": "",
   "main": "dist/server.js",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Wilfredo Porta",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.21",
