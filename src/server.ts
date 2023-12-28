@@ -1,12 +1,7 @@
-import express from 'express';
+import app from './app';
+import env from './util/validateEnv';
 
-const app = express();
-
-const port = 5000;
-
-app.get('/', (_req, res) => {
-  res.send('Hello world');
-});
+const port = env.PORT;
 
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
