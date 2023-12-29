@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+  mongo:
+    container_name: memo-mongo
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: memo
+      MONGO_INITDB_ROOT_PASSWORD: memo
+
+  mongo-express:
+    container_name: memo-mongo-express
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: memo
+      ME_CONFIG_MONGODB_ADMINPASSWORD: memo
+      ME_CONFIG_MONGODB_URL: mongodb://memo:memo@mongo:27017/
+      ME_CONFIG_OPTIONS_EDITORTHEME: 'ambiance'
+      ME_CONFIG_BASICAUTH_USERNAME: ''
